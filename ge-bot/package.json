@@ -1,0 +1,18 @@
+{
+  "name": "ge-discord-bot",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "index.js",
+  "description": "Invite Link: https://discord.com/oauth2/authorize?client_id=1468350989143642114&permissions=83968&integration_type=0&scope=bot+applications.commands",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "discord.js": "^14.25.1",
+    "dotenv": "^16.6.1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
