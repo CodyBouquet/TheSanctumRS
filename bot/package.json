@@ -5,7 +5,8 @@
   "main": "index.js",
   "description": "Invite Link: https://discord.com/oauth2/authorize?client_id=1468350989143642114&permissions=83968&integration_type=0&scope=bot+applications.commands",
   "scripts": {
-    "start": "node deploy_commands.js && node index.js",
+    "start": "node index.js",
+    "deploy-commands": "node deply_commands.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
