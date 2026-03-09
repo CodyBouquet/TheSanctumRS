@@ -18,10 +18,13 @@ function median(nums) {
 
 // Fetch JSON with cache buster
 async function getJson(url) {
-  const r = await fetch(url + `&_=${Date.now()}`);
-  const j = await r.json();
-  if (!r.ok) throw new Error(j?.error || "Request failed");
-  return j;
+  const sep = url.includes("?") ? "&" : "?";
+  const r = await fetch(url + `${sep}_=${Date.now()}`);
+  if (!r.ok) {
+    const j = await r.json().catch(() => ({}));
+    throw new Error(j?.error || `Request failed (${r.status})`);
+  }
+  return r.json();
 }
 
 // Search items by name
